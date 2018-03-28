@@ -1,0 +1,54 @@
+{
+  "name": "dtd",
+  "version": "0.0.0",
+  "description": "Yet another Digital Timing Diagram tool",
+  "repository": "github.com/1138-4EB/dtd/app",
+  "author": "DTD contributors",
+  "contributors": [
+    "1138-4EB"
+  ],
+  "license": "none",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "bulma": "^0.6.2",
+    "mdi": "^2.1.99",
+    "vue": "^2.5.13",
+    "vue-codemirror": "^4.0.3",
+    "wavedrom": "github:1138-4EB/wavedrom#export-skins"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.4",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.4",
+    "@vue/cli-service": "^3.0.0-beta.4",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^4.1.0"
+  },
+  "babel": {
+    "presets": [
+      "@vue/app"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

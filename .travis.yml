@@ -1,0 +1,74 @@
+os: linux
+dist: trusty
+sudo: required
+services: docker
+language: minimal
+install: skip
+script: "./build/travis-ci.sh"
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+deploy:
+  - &deploy-docker
+    provider: script
+    skip_cleanup: true
+    script: ./build/deploy2dockerhub.sh "$IMAGE" "$TRAVIS_COMMIT_MESSAGE"
+    on:
+      repo: 1138-4EB/icemulti
+      branch: master
+  - &deploy-releases
+    provider: releases
+    skip_cleanup: true
+    api_key:
+      secure: VzowiHBE7Lc14p/QOFvYYLz65g1uvYvffv32F2AVlpt4hs0EAdqME2+BLPnDDI1D4Oou30VXs2p37doI0J2qyyiT5TbSFzErYz+7uREYEOBWR5IQsK/iQrSxKOZ2Ox558T1zcObnZhVjAbV1yxQhdqitSWBCpayuNl4Gvubc0S1+MXhh/psvLgJ/r2Nq5gCAaoqmxvHUoNotQWYF5hKzynXPvV0wniB2l2HKc/UMK7jIu+GRKwMWk1NXuBk5ocreoAVrSH/FHD87K8wUfUqgaGjYRaniKbl2etMw4kcfRC1J+WtcUzVeHtb2tnlHo1Qk1tE7Dt5LMWYp0RlpiLfHmu4attHn2jdKBwdetGiB+admq7D6K0bROVQw6l1kJNYNROXR9PhA6ZkYQvDY1iF+RmikUee8zpGEZE0Ux1RjlCBAOE+yJu3/TWJpO3KCFEYKELqmljOgpaAu/ogyowLwDtakjzK1nA34CmgN9xwgARuxbzQNPxMIlFBeH4QJ9qMj3Jo9jUOxKF4dtSF5Y2t8p4XZ4RDBAwMb4QB35BaWCd7u2UwCVbks3CR7mdFXT22ZjN+92kgFOsqhsK67cNCXuUhL3jDAQ5His4qqca2+A25BVDFG3qz673gZotIq4/MYcBZx7daNJN88dFH47Rx8SDtiu7mb/6Y7TMaf7zW/KEs=
+    file: "icemulti-*.tgz"
+    file_glob: true
+    on:
+      repo: 1138-4EB/icemulti
+      all_branches: true
+      tags: true
+
+# For each linux build, a different job/instance (with the constraints
+# above) is executed in parallel in stage 'test'.
+env:
+  matrix:
+    - PLATFORM=alpine
+    - PLATFORM=stretch-slim
+  global:
+    - secure: "uIz2w2ivRuxI/kS4cpQmu9WtfuN4tfkAMeTxxl4C7G4oudY63vLZeKRciyZgvtqkA4SIU/xm0wU/gtsxg1vFOiGrPCT9hya8ugLgjgJCtMbRFSbOlBsNRYKlf1l5PVo847pwDNzCVtLL4YjQIh8YXs7REogy8lZb+Bquf4rt9ap6Y4891tRr6se04DEUSiGK3nfJDwZxDbGEYDC81Qwah09U8A7FqQVPXevtzk1RfEqxfa4XS6CExwsOd88cP2ZTS+nzoz+NDs8RSyAiRZSet/FG/glpfHrUvvUncOkuyEUndA0XuAtPnnB1/n3fG8TlTEFKTlliYwPIUi8jeGbfKBfBhASTGuQn3J8ney3E3x3PMs75cnlNJbqAmBgzVI+nJ4y8o5PnvD3E1WhVx6stgDcrPdDc8L3Ma4VJ+4c6BfwvQYwEu3PsqfY1z+o+1nlixTSlr33Y1HRm7UF9LyNXywwzeAVOfH7jQkwAppbYRFIX7pp5Bbo9Kcd8ZJjNEx7z4SPH8eohsTC5/zBgLzYNGEchS+cMjSD3SO8kviTDhqxYKPQSNUYaM9ZSa2ON+xRytqsLw4a1p4l8Cr9qr+N2tqTFdijC7xCM9qhlOMHBPypkIlY4/bNJV5BZWPupkEYFmHNSPXpeC8kSuGDMJM/0P/tu06oJgvOo/vcyQ8Rs4Fc=" #U
+    - secure: "j8jW5mg+ivoHNTtjftM0jAVfAappLUTR7p/Q/Rk21wKUmoHf1zdxQDUN/c9YRq3y58/6rz7OxvjYKoyCCRcAzRGMttaKkxK7BksdK+9BQlhFXQeXnpq9Fv/wRZEDM/W4wwwKyoMkAd0DyzgQ1wCZlMh32QIMTzucyewnPAmIOILdMao/fiRKobX/I35WMMwPBcCxIs/7BndUGORyHJ5qZzVjOP+DzYibjVuGrrGRlWFN/gi7fAa/9X6GI/yoP2RihGpTbiy5BSTDw3/gHYYWyElUBJEmfFiRdb4hA/qrO+e5kWJiaq6sQ77oEAyJutv5X9Uxva+yq4+DSp9SVrvIrxWP7uBUJ08CdfbbUQkvH6FjQ6Hkkbvn0Yx9tr6JLnd6yiCbGlJS0AXX6QBlnxZtSREfVdoOyiCLyGEXw/YM5zElVRbyEuelM686m80YYCVkMWKPHFehQVzDKd2HlWR/XWe+6gLDeThLs4CemxbbD5Vo7xAk1XaI/caLBu+VcuE+wsGEEsF4dV0/yZB55nGN4YzRnbuXdqpyRHr8JN/kYrbAK+J34Ze1ZsL+Ha0trdUGFI/1U+uPBbmHgbzRuFcFQYfUnqQFnWrDERz4Ew0JcTOOMJ2oBNbBbVDgC2u8/mZxiNSzVKXWTUqFhSlf9tMeZZORaMQvGO/u59gTZ8+7bGI=" #P
+
+stages:
+  - create images
+  - test
+#  - extended images
+#  - build and update gh-pages
+
+jobs:
+  include:
+    - stage: create images
+      script: if echo "$TRAVIS_COMMIT_MESSAGE" | grep -F -q "[ci images]"; then ./build/images.sh; fi;
+      deploy:
+        - <<: *deploy-docker
+#    - stage: collect ghdl/pkg images and build ghdl/pkg:all
+#      env: IMAGE="pkg"
+#      script: ./dist/linux/pack.sh
+#      deploy:
+#        - <<: *deploy-releases
+#        - <<: *deploy-docker
+#    - stage: extended images
+#      env: IMAGE="ext"
+#      script: ./dist/linux/extended.sh
+#    - stage: build and update gh-pages
+#      script: ./dist/linux/gh-pages.sh
+#      deploy:
+#        - provider: script
+#          skip_cleanup: true
+#          script: DEPLOY=true ./dist/linux/gh-pages.sh
+#          on:
+#            repo: 1138-4EB/ghdl
+#            all_branches: true
+#            branch: master

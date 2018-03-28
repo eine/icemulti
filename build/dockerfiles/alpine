@@ -1,0 +1,60 @@
+FROM alpine as alpine-factory
+
+WORKDIR /root
+
+RUN apk add --no-cache -U \
+  autoconf \
+  bash \
+  build-base \
+  clang \
+  coreutils \
+  curl \
+  flex \
+  gawk \
+  git \
+  gperf \
+  graphviz \
+  gtk+2.0-dev \
+  libffi-dev \
+  libftdi1-dev \
+  mercurial \
+  pkgconfig \
+  python3 bison \
+  readline-dev \
+  subversion \
+  tcl-dev \
+  tk \
+  tk-dev \
+  xz-dev \
+ && rm -rf /var/cache/apk/*
+
+#---
+
+FROM python/3-alpine3.7 as alpine-release
+WORKDIR /work
+#COPY /tmpinstall /elide/
+RUN apk add --no-cache \
+ ca-certificates \
+ graphviz \
+ gtk+2.0 \
+ imagemagick \
+ libftdi1 \
+ readline \
+ openssl \
+ tango-icon-theme \
+ tcl \
+ tk \
+ ttf-inconsolata \
+ xz \
+ && rm -rf /var/cache/apk/* \
+ && echo 'gtk-icon-theme-name = "Tango"' >> /usr/share/themes/Raleigh/gtk-2.0/gtkrc \
+ && export LC_ALL=C \
+ && mv /etc/profile.d/color_prompt /etc/profile.d/color_prompt.sh \
+ && mkdir -p /etc/udev/rules.d/ \
+ && echo 'ACTION=="add", ATTR{idVendor}=="0403", ATTR{idProduct}=="6010", MODE:="666"' > /etc/udev/rules.d/53-lattice-ftdi.rules
+
+ CMD ["sh","-l"]
+
+ #curl bash git gawk bison flex autoconf gperf \
+
+#  && cp /elide/init.sh /etc/profile.d/elide_init.sh \

@@ -1,0 +1,7 @@
+FROM alpine
+RUN apk -U --no-cache add ca-certificates
+WORKDIR /icemulti
+EXPOSE 8080
+ENTRYPOINT ["./icemulti"]
+#ADD icemulti.tar.gz /icemulti
+# this file is required to end with an empty line
