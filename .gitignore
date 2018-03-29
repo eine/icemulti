@@ -1,0 +1,8 @@
+app/dist/
+app/node_modules/
+
+api/vendor/
+cli/vendor/
+lib/vendor/
+
+**/yarn-error.log

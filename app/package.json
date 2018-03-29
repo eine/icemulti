@@ -1,9 +1,9 @@
 {
-  "name": "dtd",
+  "name": "go-icemulti",
   "version": "0.0.0",
-  "description": "Yet another Digital Timing Diagram tool",
-  "repository": "github.com/1138-4EB/dtd/app",
-  "author": "DTD contributors",
+  "description": "Go(lang) tools to exploit warm/cold boot in iCE40 FPGAs",
+  "repository": "github.com/1138-4EB/icemulti",
+  "author": "go-icemulti contributors",
   "contributors": [
     "1138-4EB"
   ],
@@ -15,10 +15,12 @@
   },
   "dependencies": {
     "bulma": "^0.6.2",
+    "d3": "^5.0.0",
     "mdi": "^2.1.99",
     "vue": "^2.5.13",
     "vue-codemirror": "^4.0.3",
-    "wavedrom": "github:1138-4EB/wavedrom#export-skins"
+    "vue-resource": "^1.5.0",
+    "vue-splitpane": "^1.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.4",
@@ -50,5 +52,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": "index.js"
 }

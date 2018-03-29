@@ -1,0 +1,41 @@
+FROM debian:stretch-slim AS debian-factory
+
+RUN apt-get update && apt-get install -y \
+  bison \
+  build-essential \
+  clang \
+  flex \
+  git \
+  gawk \
+  graphviz \
+  iverilog \
+  libreadline-dev \
+  libffi-dev \
+  libftdi1-dev \
+  mercurial \
+  pkg-config \
+  python \
+  python3 \
+  tar \
+  tcl-dev \
+  xdot \
+ && rm -rf /var/lib/apt/lists/* && apt-get clean all \
+ 
+#---
+ 
+FROM debian:stretch-slim AS debian-release
+
+WORKDIR /work
+
+COPY /tmpinstall /elide/
+
+RUN apt-get update && apt-get install -y \
+  graphviz \
+  iverilog \
+  libftdi1 \
+  libtcl8.6 \
+  xdot \
+ && rm -rf /var/lib/apt/lists/* && apt-get clean all \
+
+#clang bison flex libreadline-dev gawk tcl-dev libffi-dev \
+#git mercurial pkg-config python python3 \

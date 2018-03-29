@@ -1,0 +1,47 @@
+- menu element `title` attribute
+- fully dynamic/programatic taskbar(s)
+- feat main table
+  - reduce size (is-small is not implemented for tables in Bulma)
+  - fixed head and top
+  - overflow-y only applied to tbody, and/or pagination with dynamic number of rows (depending on window height)
+  - sort/filter per column
+  - resizable column widths
+  - allow to edit some/all fields (mainly to manually fill empty metadata)
+  - drag and drop one by one to memmap
+    - add also a button to 'transfer' the selected one
+    - add also a button to 'export' the selected one
+  - multi-select checkboxes
+    - export selected as collection
+    - drag and drop selected to memmap
+  - load collection and replace existing, or add to existing
+- panes
+  - save user sizes in the browser, instead of always loading the default layout
+    - allow to reset to defaults
+    - allow to load a layout configuration (JSON)
+  - allow to 'hide' a pane (expand/collapse), i.e. reduce the size to the minimum and replace the content with a large button
+    - when expanded, remember the size that had before collapsing
+- xterm/codemirror
+  - add tabs
+- memmaps
+  - load from file/remote
+  - export to file (bin, json, icem)
+  - allow horizontal split to show multiple memmaps at the same time
+    - allow drag and drop of elements or groups of elements between memmaps
+      - multi-select checkboxes
+        - support ctrl + click
+- home
+  - custom logo
+  - improve 'start hacking' button
+  - improve refs in the footer
+- HexView
+  - draw cols between adr and content
+  - highlight cols on hover (as rows)
+  - optionally group each line in blocks
+  - add header/legend
+  - add ascii representation
+  - optionally show hexdump instead of hexmat
+  - reduce opacity or use lighter color for '00' entries
+  - compute hexmat in the backend, instead of doing it in the frontend
+
+- webpack
+  - is it possible to generate a frontend-only version where vue.js parts related to backend functionality are disabled?

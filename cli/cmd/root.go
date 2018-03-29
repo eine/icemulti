@@ -15,20 +15,18 @@ import (
 	"github.com/spf13/viper"
 )
 
-var cfgFile string
-
 var rootCmd = &cobra.Command{
-	Use:   "dtd",
-	Short: "yet another Digital Timing Diagram tool",
+	Use:   "go-icemulti",
+	Short: "Go(lang) tools to exploit warm/cold boot in iCE40 FPGAs",
 	Long: `
-dtd is the main command, used to convert diagrams.
+go-icemulti is the main command.
 
-DTD is a fast and flexible CLI library for Go to convert,
-generate and/or render digital timing diagrams.
+DTD is a fast and flexible CLI library for Go to merge/pack, reorder,
+and explore binary files contaning multiple bitstreams for iCE40 FPGAs.
 
-Documentation is available at 1138-4EB.github.io/dtd`,
+Documentation is available at 1138-4EB.github.io/icemulti`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("[DTD] Yet another Digital Timing Diagram tool")
+		fmt.Println("[icemulti] Go(lang) tools to exploit warm/cold boot in iCE40 FPGAs")
 		fmt.Println("This is the default cmd (no subcomand)")
 	},
 }
@@ -42,13 +40,19 @@ func Execute() {
 	}
 }
 
+var cfgFile string
+var Verbose int
+var Output string
+
 func init() {
 	cobra.OnInitialize(initConfig)
 
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/dtd.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/icemulti.yaml)")
+	rootCmd.PersistentFlags().IntVarP(&Verbose, "verbose", "v", 0, "0: disabled, 1: minimum, 2: full")
+	rootCmd.PersistentFlags().StringVarP(&Output, "output", "o", "", "write output to file")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.

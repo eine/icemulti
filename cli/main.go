@@ -7,9 +7,15 @@
 package main
 
 import (
-	"github.com/1138-4EB/dtd/cli/cmd"
+	"github.com/1138-4EB/icemulti/cli/cmd"
+	_ "github.com/spf13/cobra/doc"
+	"runtime"
 )
 
 func main() {
+	runtime.GOMAXPROCS(runtime.NumCPU())
 	cmd.Execute()
+	//doc.GenMarkdownTree(cmd.RootCmd, "./doc")
 }
+
+//./go-icemulti.exe pack -mb 0 -p 1,2,3,4 ../dynreconfig/bitstreams/img0*.bin

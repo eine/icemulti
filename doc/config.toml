@@ -1,0 +1,50 @@
+baseurl                 = "/doc/"               # Your domain name. Must end with "/"
+languageCode            = "en-gb"
+title                   = "[icemulti] Tools to exploit warm/cold boot in iCE40 FPGAs"
+theme                   = "sam"
+# googleAnalytics       = "xxx"             # Tracking code, eg. "UA-111111111-1"
+
+[params]
+    dateform            = "2006/01/02 Mon"
+    dateformfull        = "2006/01/02 Mon 15:04:05 EST"
+    favicon             = "/sam.ico"
+    pygmentsStyle       = "monokai"                     # https://help.farbox.com/pygments.html
+    pygmentsCodefences  = true
+    homepage            = "main"                        # What to call the home page link
+    galleryFolder       = "images/"                     # Where you've put your images, after "/content/gallery/"
+    clickablePhotos     = true                          # Allow links to the full size images
+    footerText          = "icemulti documentation."
+
+# Metadata
+    description         = "A new Hugo site."            # Max 160 characters show in search results
+    twitterCard         = "summary_large_image"         # Card value “summary”, “summary_large_image”, “app”, or “player”
+    primaryImage        = "/tn.png"                     # Image that shows on Twitter cards and OpenGraph links
+
+[[params.mainMenu]]
+    link = "/"
+    text = "app"
+
+[[params.mainMenu]]
+    link = "/doc/quickguide"
+    text = "quick guide"
+
+[[params.mainMenu]]
+    link = "/doc/format"
+    text = "file/data formats"
+
+[[params.mainMenu]]
+    link = "/doc/experiment"
+    text = "experiments/tests"
+
+#[[params.mainMenu]]
+#    link = "/doc/posts"
+#    text = "writing"
+#
+#[[params.mainMenu]]
+#    link = "/doc/gallery"
+#    text = "gallery"
+#
+#[[params.mainMenu]]
+#    link = "/doc/about"
+#    text = "who is sam?"
+#
