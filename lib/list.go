@@ -48,20 +48,20 @@ func NewBinFile(p, n string, s int64, t time.Time, m t_meta, b []byte) (f t_binF
 }
 
 func EmptyBinFileFromPathAndInfo(p string, i os.FileInfo) (f t_binFile) {
-  return NewBinFile(
-	  p,
-	  strings.TrimSuffix(i.Name(), filepath.Ext(p)),
-	  i.Size(),
-	  i.ModTime(),
-	  EmptyMeta(),
-	  []byte{},
-  )
+	return NewBinFile(
+		p,
+		strings.TrimSuffix(i.Name(), filepath.Ext(p)),
+		i.Size(),
+		i.ModTime(),
+		EmptyMeta(),
+		[]byte{},
+	)
 }
 
 type t_binFileList map[string]t_binFile
 
 func (l *t_binFileList) Add(f t_binFile) {
-	(*l)[f.Name] = f;
+	(*l)[f.Name] = f
 }
 
 func List(args []string, rec bool) (files t_binFileList, err error) {
@@ -82,7 +82,7 @@ func List(args []string, rec bool) (files t_binFileList, err error) {
 			} else {
 				switch ext := filepath.Ext(path); ext {
 				case ".bin", ".bit":
-          bin, err := ReadBIN(path)
+					bin, err := ReadBIN(path)
 					if err != nil {
 						return err
 					}
@@ -100,11 +100,11 @@ func List(args []string, rec bool) (files t_binFileList, err error) {
 						f := EmptyBinFileFromPathAndInfo(path, info)
 						f.Bin = bin
 						f.Meta = meta
-					  files.Add(f)
+						files.Add(f)
 					}
 				case ".json", ".icem":
 					fmt.Println(path)
-//        default:
+					//        default:
 				}
 			}
 			return nil

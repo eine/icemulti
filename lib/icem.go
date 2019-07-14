@@ -13,17 +13,17 @@ import (
 )
 
 type isICEM struct {
-	hasBin bool
+	hasBin  bool
 	hasJson bool
 }
 
 func isValidICEM(v isICEM) bool {
-	return (v.hasBin == true) && (v.hasJson == true);
+	return (v.hasBin == true) && (v.hasJson == true)
 }
 
 func ReadTGZ(path string) (bin []byte, meta t_meta, err error) {
 
-  flagValid := isICEM{false,false}
+	flagValid := isICEM{false, false}
 
 	f, err := os.Open(path)
 	if err != nil {
@@ -54,12 +54,12 @@ func ReadTGZ(path string) (bin []byte, meta t_meta, err error) {
 		case tar.TypeReg:
 			switch header.Name {
 			case "./bin":
-				flagValid.hasBin = true;
+				flagValid.hasBin = true
 				var binBuf bytes.Buffer
 				io.Copy(bufio.NewWriter(&binBuf), tarReader)
 				bin = binBuf.Bytes()
 			case "./json":
-				flagValid.hasJson = true;
+				flagValid.hasJson = true
 				var jsonBuf bytes.Buffer
 				io.Copy(bufio.NewWriter(&jsonBuf), tarReader)
 				json.Unmarshal(jsonBuf.Bytes(), &meta)
@@ -75,7 +75,7 @@ func ReadTGZ(path string) (bin []byte, meta t_meta, err error) {
 		}
 	}
 	if isValidICEM(flagValid) {
-	  return bin, meta, err
+		return bin, meta, err
 	}
 	return nil, EmptyMeta(), nil
 }

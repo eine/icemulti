@@ -10,14 +10,6 @@
   revision = "e9840f5286aa276f460dcafa093f3a84f430d249"
 
 [[projects]]
-  digest = "1:160eabf7a69910fd74f29c692718bc2437c1c1c7d4c9dea9712357752a70e5df"
-  name = "github.com/gorilla/context"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "1ea25387ff6f684839d82767c1733ff4d4d15d0a"
-  version = "v1.1"
-
-[[projects]]
   digest = "1:cbec35fe4d5a4fba369a656a8cd65e244ea2c743007d8f6c1ccb132acf9d1296"
   name = "github.com/gorilla/mux"
   packages = ["."]
@@ -38,7 +30,6 @@
   analyzer-version = 1
   input-imports = [
     "github.com/1138-4EB/icemulti/lib",
-    "github.com/gorilla/context",
     "github.com/gorilla/mux",
     "github.com/ogier/pflag",
   ]
