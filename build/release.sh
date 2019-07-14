@@ -13,7 +13,7 @@ yarn build -v
 mv dist ../release/public
 
 cd ../api
-go build -o ../release/icemulti
+CGO_ENABLED=0 go build -a -o ../release/icemulti
 
 cd ..
 
