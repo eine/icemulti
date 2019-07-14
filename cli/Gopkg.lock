@@ -7,7 +7,7 @@
   name = "github.com/1138-4EB/icemulti"
   packages = ["lib"]
   pruneopts = "UT"
-  revision = "e9840f5286aa276f460dcafa093f3a84f430d249"
+  revision = "9187290b3452c1810e9a28887b43c929b6995aaa"
 
 [[projects]]
   digest = "1:7cb4fdca4c251b3ef8027c90ea35f70c7b661a593b9eeae34753c65499098bb1"
