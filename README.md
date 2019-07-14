@@ -97,7 +97,3 @@ Moreover, static files, such as the sources of `app`, can be embedded in a go bi
 In order to generate release tarballs, first set the devenv (either `build/docker_devenv.sh sh` -docker- or `build/init_devenv.sh` -local-). Then, execute `build/release.sh`, which will build all the pieces and generate tarballs in the root dir. Last, and optionally, execute `build/release_img.sh` to generate docker images from scratch.
 
 Note: `release_img.sh` must be executed in the host, not inside a container.
-
-## Refs
-
-- [Concise guide to golang/dep ](https://gist.github.com/subfuzion/12342599e26f5094e4e2d08e9d4ad50d)

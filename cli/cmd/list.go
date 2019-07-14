@@ -42,7 +42,14 @@ related to found binary files.`,
 		table.SetHeader([]string{"Name", "Size", "ModTime", "Design", "Device", "Board"})
 
 		for _, v := range bins {
-			table.Append([]string{v.Name, fmt.Sprintf("%d", v.Size), v.ModTime.Format("06/01/02 15:04"), v.Meta.Name, v.Meta.Device, v.Meta.Board})
+			table.Append([]string{
+				v.Name,
+				fmt.Sprintf("%d", v.Size),
+				v.ModTime.Format("06/01/02 15:04"),
+				//v.Meta.Name,
+				v.Meta.Device,
+				v.Meta.Board,
+			})
 		}
 
 		/*
