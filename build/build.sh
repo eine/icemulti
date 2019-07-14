@@ -1,9 +1,9 @@
 #!/bin/sh
 
 cd $(dirname $0)
-if [ -f travis-utils.sh ]; then . travis-utils.sh; fi
+if [ -f utils.sh ]; then . utils.sh; fi
 
-fold_start steveicarus/iverilog
+travis_start steveicarus/iverilog
   curl -L https://github.com/steveicarus/iverilog/archive/master.tar.gz | tar xzv
   cd iverilog-master
   sh autoconf.sh
@@ -12,34 +12,34 @@ fold_start steveicarus/iverilog
   make check
 
   cd ..
-fold_end steveicarus/iverilog
+travis_finish steveicarus/iverilog
 
-fold_start cliffordwolf/icestorm
+travis_start cliffordwolf/icestorm
   curl -L https://github.com/cliffordwolf/icestorm/archive/master.tar.gz | tar xvz
   cd icestorm-master
   make -j$(nproc) DESTDIR=$HOME/package-icestorm
 
   cd ..
-fold_end cliffordwolf/icestorm
+travis_finish cliffordwolf/icestorm
 
-fold_start cseed/arachne-pnr
+travis_start cseed/arachne-pnr
   curl -L https://github.com/cseed/arachne-pnr/archive/master.tar.gz | tar xvz
   cd arachne-pnr-master
   make -j$(nproc) DESTDIR=$HOME/package-arachne-pnr
 
   cd ..
-fold_end cseed/arachne-pnr
+travis_finish cseed/arachne-pnr
 
-fold_start cliffordwolf/yosys
+travis_start cliffordwolf/yosys
   curl -L https://github.com/cliffordwolf/yosys/archive/master.tar.gz | tar xvz
   cd yosys-master
   make -j$(nproc) DESTDIR=$HOME/package-yosys
   make test
 
   cd ..
-fold_end cliffordwolf/yosys
+travis_finish cliffordwolf/yosys
 
-fold_start gtkwave-code/gtkwave
+travis_start gtkwave-code/gtkwave
 #REPO=svn://svn.code.sf.net/p/gtkwave/code/gtkwave3
 #svn checkout $REPO ./
 
@@ -50,7 +50,7 @@ fold_start gtkwave-code/gtkwave
   make check
 
   cd ..
-fold_end gtkwave-code/gtkwave
+travis_finish gtkwave-code/gtkwave
 
 #cd $HOME/package-$TOOL/usr/local/
 #tar -cvf $HOME/package-$TOOL/$TOOL.tar *

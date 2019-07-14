@@ -1,10 +1,10 @@
 #!/bin/sh
 
-mkdir release
-cd release
-cp ../dtd-app.tgz ./
-cp ../build/dockerfiles/prod ./Dockerfile
-echo "ADD icemulti-app.tgz /icemulti" >> Dockerfile
-docker build -t elide/icemulti:app .
-cd ..
-rm -rf release
+docker build -t elide/icemulti:app - <<EOF
+FROM alpine
+RUN apk -U --no-cache add ca-certificates
+WORKDIR /icemulti
+EXPOSE 8080
+ENTRYPOINT ["./icemulti"]
+ADD icemulti-app.tgz /icemulti
+EOF
