@@ -18,7 +18,7 @@
     "d3": "^5.9.7",
     "mdi": "^2.1.99",
     "vue": "^2.6.10",
-    "vue-codemirror": "^4.0.3",
+    "vue-codemirror": "^4.0.6",
     "vue-resource": "^1.5.0",
     "vue-splitpane": "^1.0.2"
   },
