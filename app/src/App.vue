@@ -63,7 +63,7 @@
 
 <script>
 import 'bulma/css/bulma.css';
-import 'mdi/css/materialdesignicons.min.css';
+import '@mdi/font/css/materialdesignicons.min.css';
 
 import splitPane from 'vue-splitpane'
 
