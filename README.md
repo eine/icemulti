@@ -1,3 +1,10 @@
+<p align="center">
+  <a title="Frontend Dependency Status" href="https://david-dm.org/1138-4EB/icemulti?path=app"><img src="https://img.shields.io/david/1138-4EB/icemulti.svg?path=app&longCache=true&style=flat-square&label=frontend%20deps"></a><!--
+  -->
+  <a title="Frontend DevDependency Status" href="https://david-dm.org/1138-4EB/icemulti?path=app&type=dev"><img src="https://img.shields.io/david/dev/1138-4EB/icemulti.svg?path=app&longCache=true&style=flat-square&label=frontend%20devdeps"></a><!--
+  -->
+</p>
+
 # Tools to exploit dynamic reconfiguration in iCE40 FPGAs
 
 This project is based on [IceStorm](http://www.clifford.at/icestorm) ([cliffordwolf/icestorm](https://github.com/cliffordwolf/icestorm)):
