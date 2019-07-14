@@ -3,11 +3,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:827ccca4c5ea25e6789f39d115afdfb93df3acf86ba39eb2280d1ac72567e16d"
+  digest = "1:21d672d0611b976fea25c1f90c144ac94dc633fc081de29ac18a617776e7fe07"
   name = "github.com/1138-4EB/icemulti"
   packages = ["lib"]
   pruneopts = "UT"
-  revision = "e9840f5286aa276f460dcafa093f3a84f430d249"
+  revision = "4ad8615f192837a348ace3fafaf844995b1544be"
 
 [[projects]]
   digest = "1:7cb4fdca4c251b3ef8027c90ea35f70c7b661a593b9eeae34753c65499098bb1"
