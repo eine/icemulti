@@ -3,31 +3,44 @@
 
 [[projects]]
   branch = "master"
+  digest = "1:827ccca4c5ea25e6789f39d115afdfb93df3acf86ba39eb2280d1ac72567e16d"
   name = "github.com/1138-4EB/icemulti"
   packages = ["lib"]
-  revision = "d15747e2161e9e5e92b932215f53cd407324ca5d"
+  pruneopts = "UT"
+  revision = "e9840f5286aa276f460dcafa093f3a84f430d249"
 
 [[projects]]
+  digest = "1:160eabf7a69910fd74f29c692718bc2437c1c1c7d4c9dea9712357752a70e5df"
   name = "github.com/gorilla/context"
   packages = ["."]
+  pruneopts = "UT"
   revision = "1ea25387ff6f684839d82767c1733ff4d4d15d0a"
   version = "v1.1"
 
 [[projects]]
+  digest = "1:cbec35fe4d5a4fba369a656a8cd65e244ea2c743007d8f6c1ccb132acf9d1296"
   name = "github.com/gorilla/mux"
   packages = ["."]
-  revision = "53c1911da2b537f792e7cafcb446b05ffe33b996"
-  version = "v1.6.1"
+  pruneopts = "UT"
+  revision = "00bdffe0f3c77e27d2cf6f5c70232a2d3e4d9c15"
+  version = "v1.7.3"
 
 [[projects]]
+  digest = "1:8fd3a15613c7e70cceff3aa03dd57560dba87c4868864e397d5eb2f14addd3f5"
   name = "github.com/ogier/pflag"
   packages = ["."]
+  pruneopts = "UT"
   revision = "32a05c62658bd1d7c7e75cbc8195de5d585fde0f"
   version = "v0.0.1"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a21b640559c2c580f1e5d0e58cf1d65fad985cc60ff0338875ffc65e1c6194fe"
+  input-imports = [
+    "github.com/1138-4EB/icemulti/lib",
+    "github.com/gorilla/context",
+    "github.com/gorilla/mux",
+    "github.com/ogier/pflag",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
