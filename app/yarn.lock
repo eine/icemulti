@@ -957,10 +957,10 @@
     "@vue/babel-plugin-transform-vue-jsx" "^1.0.0"
     camelcase "^5.0.0"
 
-"@vue/cli-overlay@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-4.0.0.tgz#abb58c7b9252a7a9e42aa00e49bfc352ec86e977"
-  integrity sha512-tA3ZCDY3nzKgZcr2ymzZjebNuosKpZo+zRbyp2F2v4NghmflZXb2i/TGv6dZa3fVqCbtBwi5K5KYD9lqg+9C4g==
+"@vue/cli-overlay@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-4.0.3.tgz#545ae7771c63a8ec2a0f32bb8fc6066d94910375"
+  integrity sha512-s4lFxlH/244KtGq/SWZI8y6c2yEbxe4SlyExXj3U3LDt1jmCJ5B6hksMPHeAWFRtIbWwHjQkJUjWPzBWDKv40Q==
 
 "@vue/cli-plugin-babel@^4.0.3":
   version "4.0.3"
@@ -988,15 +988,29 @@
     eslint "^4.19.1"
     eslint-plugin-vue "^4.7.1"
 
-"@vue/cli-service@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-4.0.0.tgz#8b8502840fd3b12ed3659b705ba2285df2300e3e"
-  integrity sha512-IGhu3YjzcmMH7vi1QdSF+FQiT8Xd+RrjPuMQLVcJR35F3XesewXcQuHwZ/PD/fQduAKqBrl9fJyeHeQug8owUA==
+"@vue/cli-plugin-router@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-router/-/cli-plugin-router-4.0.3.tgz#bbc828c67aeaeab1bf5f953258eed4caa26e0695"
+  integrity sha512-++Z45znD01+HpJsj/T4i+HQUt64agrXsvEiN1KPvKaBfCMUCGdjuPirwkvR+6Y89kolEBbPtaZ4RyODOltFjhw==
+  dependencies:
+    "@vue/cli-shared-utils" "^4.0.3"
+
+"@vue/cli-plugin-vuex@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-vuex/-/cli-plugin-vuex-4.0.3.tgz#2a2d60b398cdc957ddf1584dae2378d64a00ca65"
+  integrity sha512-n54gMH4F1SdR6RryNG4E4+4w3uNNhYTvFWYDp2qarMxs+dQxPk5iuWUS5PgGBVGAEww2z1Efj9RBsVhXY1WwOQ==
+
+"@vue/cli-service@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-4.0.3.tgz#d63583f4642acf9dccaabdc2c940a130eaf71c6b"
+  integrity sha512-Tb/36qqged51NnkE/cCAHxkVxjqyZ7qpQ/4USo30bN3II3YpYDEVh61hAp2HUPAL/0PALayZckWzlwsga8daOA==
   dependencies:
     "@intervolga/optimize-cssnano-plugin" "^1.0.5"
     "@soda/friendly-errors-webpack-plugin" "^1.7.1"
-    "@vue/cli-overlay" "^4.0.0"
-    "@vue/cli-shared-utils" "^4.0.0"
+    "@vue/cli-overlay" "^4.0.3"
+    "@vue/cli-plugin-router" "^4.0.3"
+    "@vue/cli-plugin-vuex" "^4.0.3"
+    "@vue/cli-shared-utils" "^4.0.3"
     "@vue/component-compiler-utils" "^3.0.0"
     "@vue/preload-webpack-plugin" "^1.1.0"
     "@vue/web-component-wrapper" "^1.2.0"
@@ -1067,7 +1081,7 @@
     semver "^6.0.0"
     string.prototype.padstart "^3.0.0"
 
-"@vue/cli-shared-utils@^4.0.0", "@vue/cli-shared-utils@^4.0.3":
+"@vue/cli-shared-utils@^4.0.3":
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.0.3.tgz#10cc29e8caa3f14cffc0416ddf804cf4d10197b9"
   integrity sha512-MqNg13fDCfzPmj83Wx8115dlGcvpLXGxL0ZFI+0UgO6kpR+RHvjE/yVpr0a/yW5XqQidUZFN6nY2WaA28wGI+Q==
