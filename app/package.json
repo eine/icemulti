@@ -23,7 +23,7 @@
     "vue-splitpane": "^1.0.4"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.0.3",
+    "@vue/cli-plugin-babel": "^4.0.4",
     "@vue/cli-plugin-eslint": "^3.12.1",
     "@vue/cli-service": "^4.0.4",
     "node-sass": "^4.12.0",
