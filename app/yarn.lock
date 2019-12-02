@@ -9022,10 +9022,10 @@ vue-resource@^1.5.1:
   dependencies:
     got "^8.0.3"
 
-vue-splitpane@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/vue-splitpane/-/vue-splitpane-1.0.4.tgz#cdf744a8f31bedcb086e9545a9453565d360bd02"
-  integrity sha512-aSLmwNyqWCtn4q/JlEXa/UB9/zP1SLODfmMJof+qitL91Rz6g13cJKGmNEHJtBp6ivsk6p74fGfXUJUB3Izuig==
+vue-splitpane@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/vue-splitpane/-/vue-splitpane-1.0.6.tgz#c4667bfdd8e10ced5d23d09fe8a129585c2c04c0"
+  integrity sha512-6sneVSEeF1VsCD025HP93nRxwzYhv3rotCeYi2Ah1FmGxwtfqbCZEIzaHGberdGNCpMlEzGD/1OIE1kK5QukLA==
 
 vue-style-loader@^4.1.0:
   version "4.1.2"
