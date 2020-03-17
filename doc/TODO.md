@@ -1,0 +1,3 @@
+- Remove posts
+- Remove default images from gallery
+- enable and use gitinfo
