@@ -1,0 +1,2 @@
+- Instead of reading entire tgz/tar.gz files, can we read only an index to know the filenames?
+- Generate documentation https://godoc.org/
