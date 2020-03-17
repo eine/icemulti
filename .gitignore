@@ -1,0 +1,8 @@
+app/dist/
+app/node_modules/
+
+api/public/
+
+release/
+
+**/yarn-error.log
