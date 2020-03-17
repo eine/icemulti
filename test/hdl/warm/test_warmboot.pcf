@@ -1,0 +1,16 @@
+# Definición para la iceZUM Alhambra v1.1.
+set_io data[7] 104
+set_io data[6] 102
+set_io data[5] 101
+set_io data[4] 99
+set_io data[3] 98
+set_io data[2] 97
+set_io data[1] 96
+set_io data[0] 95
+set_io btn1    10
+set_io btn2    11
+
+
+
+
+
