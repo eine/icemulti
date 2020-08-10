@@ -23,11 +23,11 @@
     "vue-splitpane": "^1.0.6"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.4.6",
+    "@vue/cli-plugin-babel": "^4.5.2",
     "@vue/cli-plugin-eslint": "^3.12.1",
-    "@vue/cli-service": "^4.4.6",
+    "@vue/cli-service": "^4.5.2",
     "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.2",
+    "sass-loader": "^9.0.3",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.44.1"
   },
