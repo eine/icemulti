@@ -17,7 +17,7 @@
     "bulma": "^0.9.0",
     "d3": "^5.16.0",
     "@mdi/font": "^5.5.55",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-codemirror": "^4.0.6",
     "vue-resource": "^1.5.1",
     "vue-splitpane": "^1.0.6"
@@ -28,7 +28,7 @@
     "@vue/cli-service": "^4.5.3",
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.3",
-    "vue-template-compiler": "^2.6.11",
+    "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.1"
   },
   "babel": {
