@@ -20,14 +20,14 @@
     "vue-splitpane": "^1.0.6"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.9",
-    "@vue/cli-plugin-eslint": "^4.5.9",
-    "@vue/cli-service": "^4.5.9",
+    "@vue/cli-plugin-babel": "^4.5.10",
+    "@vue/cli-plugin-eslint": "^4.5.10",
+    "@vue/cli-service": "^4.5.10",
     "eslint": "^7.17.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.12",
-    "webpack": "^5.11.1"
+    "webpack": "^5.12.3"
   },
   "babel": {
     "presets": [
