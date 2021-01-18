@@ -13,7 +13,7 @@
   "dependencies": {
     "bulma": "^0.9.1",
     "d3": "^6.3.1",
-    "@mdi/font": "^5.8.55",
+    "@mdi/font": "^5.9.55",
     "vue": "^2.6.12",
     "vue-codemirror": "^4.0.6",
     "vue-resource": "^1.5.1",
@@ -23,11 +23,11 @@
     "@vue/cli-plugin-babel": "^4.5.10",
     "@vue/cli-plugin-eslint": "^4.5.10",
     "@vue/cli-service": "^4.5.10",
-    "eslint": "^7.17.0",
+    "eslint": "^7.18.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.12",
-    "webpack": "^5.12.3"
+    "webpack": "^5.15.0"
   },
   "babel": {
     "presets": [
