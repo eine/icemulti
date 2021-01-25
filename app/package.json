@@ -22,7 +22,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.10",
     "@vue/cli-plugin-eslint": "^4.5.10",
-    "@vue/cli-service": "^4.5.10",
+    "@vue/cli-service": "^4.5.11",
     "eslint": "^7.18.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
