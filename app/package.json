@@ -27,7 +27,7 @@
     "node-sass": "^5.0.0",
     "sass-loader": "^11.0.0",
     "vue-template-compiler": "^2.6.12",
-    "webpack": "^5.23.0"
+    "webpack": "^5.24.2"
   },
   "babel": {
     "presets": [
