@@ -16,7 +16,7 @@
     "@mdi/font": "^5.9.55",
     "vue": "^2.6.12",
     "vue-codemirror": "^4.0.6",
-    "vue-resource": "^1.5.1",
+    "vue-resource": "^1.5.2",
     "vue-splitpane": "^1.0.6"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "node-sass": "^5.0.0",
     "sass-loader": "^11.0.0",
     "vue-template-compiler": "^2.6.12",
-    "webpack": "^5.24.2"
+    "webpack": "^5.24.3"
   },
   "babel": {
     "presets": [
