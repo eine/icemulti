@@ -23,7 +23,7 @@
     "@vue/cli-plugin-babel": "^4.5.11",
     "@vue/cli-plugin-eslint": "^4.5.11",
     "@vue/cli-service": "^4.5.11",
-    "eslint": "^7.21.0",
+    "eslint": "^7.22.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^11.0.0",
     "vue-template-compiler": "^2.6.12",
