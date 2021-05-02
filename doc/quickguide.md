@@ -1,5 +1,5 @@
 ---
-title: "Quick Guide"
+title: "[icemulti] Tools for exploiting warm/cold boot in iCE40 FPGAs"
 ---
 
 # Scheme
@@ -210,3 +210,13 @@ LUT and FSM in Verilog/VHDL + hard SPI
 
 http://www.mouser.com/ds/2/225/iCE40FamilyHandbook-311139.pdf
 Page 62. User SPI IP.
+
+# References
+
+- "iCE40 Programming and Configuration" (Technical Note TN1248): http://www.latticesemi.com/-/media/LatticeSemi/Documents/ApplicationNotes/IK/iCE40ProgrammingandConfiguration.ashx (pages 14-17)
+- https://github.com/juanmard/icestorm
+- https://github.com/juanmard/screen-warmboot
+- https://github.com/juanmard/collection-Pong
+- https://groups.google.com/forum/#!topic/fpga-wars-explorando-el-lado-libre/flvaYt9nCaA
+- https://groups.google.com/forum/#!topic/fpga-wars-explorando-el-lado-libre/4L0QO0WVPm4
+- https://groups.google.com/forum/#!searchin/fpga-wars-explorando-el-lado-libre/cold$20boot|sort:date/fpga-wars-explorando-el-lado-libre/TAqwHxEDTXo/4a7lATzRAQAJ
