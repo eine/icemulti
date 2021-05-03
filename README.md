@@ -8,9 +8,9 @@
 # Tools to exploit dynamic reconfiguration in iCE40 FPGAs
 
 - go(lang):
-  - `api`: AJAX service and file server (backend).
-  - `cli`: CLI tool to use the resources implemented in `lib`.
   - `lib`: sources used by `api` and `cli`, and expected to be used as a library by external projects (core).
+  - `cli`: CLI tool to use the resources implemented in `lib`.
+  - `api`: AJAX service and file server (backend).
 - HTML + CSS + JavaScript:
   - `app`: sources of a web-based GUI (frontend).
 - `doc`: documentation.
