@@ -13,6 +13,5 @@
   - `lib`: sources used by `api` and `cli`, and expected to be used as a library by external projects (core).
 - HTML + CSS + JavaScript:
   - `app`: sources of a web-based GUI (frontend).
-- `assets`: common logos, images...
-- `doc`: sources of the documentation (a [Hugo](https://github.com/gohugoio/hugo) site).
+- `doc`: documentation.
 - `test`: example files in multiple formats.

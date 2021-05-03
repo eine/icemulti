@@ -2,7 +2,6 @@
 <div id="home">
   <div class="spacer"></div>
   <div id="hello">
-    <div><img src="../../../assets/vue_logo.png"></div>
     <h1 class="title is-spaced">
       Go(lang) tools to exploit warm/cold boot in iCE40 FPGAs
     </h1>
